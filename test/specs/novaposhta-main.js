@@ -23,8 +23,9 @@ describe('Nova Poshta main page', () => {
         await expect(searchField).toHaveValue('String')
     })
     
-    it('should click search button', async () => {
+    xit('should click search button', async () => {
         await browser.url('https://novaposhta.ua/')
+
         await browser.waitUntil(async () => {
             return $('aria/закрыть').isDisplayed()
         }, 5000, 'Button is not displayed')

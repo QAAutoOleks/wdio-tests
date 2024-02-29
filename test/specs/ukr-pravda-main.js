@@ -13,4 +13,16 @@ describe('Ukrpravda main page', () => {
         await browser.pause(1000)
         
     })
+
+    it('should get HTML tags for icon menu', async () => {
+        await browser.url('https://www.pravda.com.ua/')
+        await browser.pause(1000)
+        
+        const iconMenuOuterHTML = await $('.icon-menu').getHTML()
+        console.log('Outer HTML tags: ' + iconMenuOuterHTML)
+        
+        const iconMenuInnerHTML = await $('.icon-menu').getHTML(false)
+        console.log('Inner HTML tags: ' + iconMenuInnerHTML)
+
+    })
 })
