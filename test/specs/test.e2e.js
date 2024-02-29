@@ -1,10 +1,11 @@
 import { expect } from '@wdio/globals'
 
+
 describe('Webdriverio main page', () => {
     xit('should should have correct title', async () => {
         await browser.url('https://webdriver.io');
         const title = await browser.getTitle()
-        console.log(title);
+        console.log(title)
         await expect(browser).toHaveTitle('WebdriverIO · Next-gen browser and mobile automation test framework for Node.js | WebdriverIO')
     });
 
@@ -86,5 +87,5 @@ describe('Webdriverio main page', () => {
 
         let subtitle = await $('.hero__subtitle')
         console.log('Subtitle text is: ' + await subtitle.getText())
-    })
+    });
 });
