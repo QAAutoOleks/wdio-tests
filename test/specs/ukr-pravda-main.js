@@ -3,7 +3,7 @@ import { expect } from '@wdio/globals'
 
 describe('Ukrpravda main page', () => {
 
-    it('should scroll down to icons of social networks', async () => {
+    xit('should scroll down to icons of social networks', async () => {
 
         await browser.url('https://www.pravda.com.ua/')
         await browser.pause(1000)

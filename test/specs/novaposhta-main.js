@@ -23,9 +23,11 @@ describe('Nova Poshta main page', () => {
         await expect(searchField).toHaveValue('String')
     })
     
-    xit('should click search button', async () => {
+    it('should click search button', async () => {
         await browser.url('https://novaposhta.ua/')
-        await browser.pause(4000)
+        await browser.waitUntil(async () => {
+            return $('aria/закрыть').isDisplayed()
+        }, 5000, 'Button is not displayed')
                 
         // text from element put after aria/
         let addCloseButton = await $('aria/закрыть')
