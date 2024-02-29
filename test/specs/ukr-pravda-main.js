@@ -1,4 +1,4 @@
-import { expect } from '@wdio/globals'
+import assert from 'assert/strict'
 
 
 describe('Ukrpravda main page', () => {
@@ -14,7 +14,7 @@ describe('Ukrpravda main page', () => {
         
     })
 
-    it('should get HTML tags for icon menu', async () => {
+    xit('should get HTML tags for icon menu', async () => {
         await browser.url('https://www.pravda.com.ua/')
         await browser.pause(1000)
         
@@ -24,5 +24,14 @@ describe('Ukrpravda main page', () => {
         const iconMenuInnerHTML = await $('.icon-menu').getHTML(false)
         console.log('Inner HTML tags: ' + iconMenuInnerHTML)
 
+    })
+
+    it('should check label isVisible by assert', async () => {
+        await browser.url('https://www.pravda.com.ua/')
+        await browser.pause(2000)
+
+        const label = await $("[aria-label='Українська правда']")
+        
+        assert(await label.isDisplayed() === true)
     })
 })
