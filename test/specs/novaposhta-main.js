@@ -27,6 +27,7 @@ describe('Nova Poshta main page', () => {
         await browser.url('https://novaposhta.ua/')
         await browser.pause(4000)
                 
+        // text from element put after aria/
         let addCloseButton = await $('aria/закрыть')
         await browser.pause(1000)
         await addCloseButton.click()
