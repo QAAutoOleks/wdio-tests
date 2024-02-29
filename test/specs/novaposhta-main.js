@@ -12,14 +12,29 @@ describe('Nova Poshta main page', () => {
         
     })
     
-    it('addValue to search field', async () => {
+    xit('addValue to search field', async () => {
         await browser.url('https://novaposhta.ua/')
         await browser.pause(1000)
         
         let searchField = await $('#cargo_number')
         await searchField.addValue('String')
         await browser.pause(1000)
-
+        
         await expect(searchField).toHaveValue('String')
+    })
+    
+    xit('click search button', async () => {
+        await browser.url('https://novaposhta.ua/')
+        await browser.pause(1000)
+        
+        let searchField = await $('#cargo_number')
+        await browser.pause(1000)
+        await searchField.addValue('String')
+        await browser.pause(1000)
+        
+        let searchButton = await $('//*[@id="top_block"]/div[1]/div/div[2]/form/input[2]')
+        await searchButton.click()
+        await browser.pause(1000)
+
     })
 })
