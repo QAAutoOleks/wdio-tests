@@ -23,8 +23,13 @@ describe('Nova Poshta main page', () => {
         await expect(searchField).toHaveValue('String')
     })
     
-    xit('click search button', async () => {
+    it('click search button', async () => {
         await browser.url('https://novaposhta.ua/')
+        await browser.pause(4000)
+                
+        let addCloseButton = await $('aria/закрыть')
+        await browser.pause(1000)
+        await addCloseButton.click()
         await browser.pause(1000)
         
         let searchField = await $('#cargo_number')
