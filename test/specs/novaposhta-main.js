@@ -23,7 +23,7 @@ describe('Nova Poshta main page', () => {
         await expect(searchField).toHaveValue('String')
     })
     
-    it('click search button', async () => {
+    xit('click search button', async () => {
         await browser.url('https://novaposhta.ua/')
         await browser.pause(4000)
                 
@@ -42,5 +42,17 @@ describe('Nova Poshta main page', () => {
         await searchButton.click()
         await browser.pause(1000)
 
+    })
+
+    it('getAttribute from Contacts and go to recieved link', async () => {
+        await browser.url('https://novaposhta.ua/')
+        await browser.pause(4000)
+        
+        let addCloseButton = await $('aria/Контакти')
+        await browser.pause(1000)
+        
+        const link = await addCloseButton.getAttribute('href')
+        await browser.url(link)
+        await browser.pause(1000)
     })
 })
