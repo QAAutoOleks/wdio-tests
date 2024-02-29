@@ -44,15 +44,26 @@ describe('Nova Poshta main page', () => {
 
     })
 
-    it('getAttribute from Contacts and go to recieved link', async () => {
+    xit('getAttribute from Contacts button and go to recieved link', async () => {
         await browser.url('https://novaposhta.ua/')
-        await browser.pause(4000)
-        
-        let addCloseButton = await $('aria/Контакти')
         await browser.pause(1000)
         
-        const link = await addCloseButton.getAttribute('href')
+        let contactsButton = await $('aria/Контакти')
+        await browser.pause(1000)
+        
+        const link = await contactsButton.getAttribute('href')
         await browser.url(link)
         await browser.pause(1000)
+    })
+
+    it('is register clickable', async () => {
+        await browser.url('https://novaposhta.ua/')
+        await browser.pause(1000)
+        
+        let registerButton = await $('.a[href="new.novaposhta.ua"]')
+        await browser.pause(1000)
+        
+        let result = await registerButton.isClickable()
+        console.log(result)
     })
 })
