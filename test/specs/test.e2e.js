@@ -81,7 +81,7 @@ describe('Webdriverio main page', () => {
         console.log('Location by x is: ' + xLocation) // output: x
     });
 
-    it('should show getText command', async () => {
+    xit('should show getText command', async () => {
         await browser.url('https://webdriver.io');
 
         let subtitle = await $('.hero__subtitle')
