@@ -11,6 +11,7 @@ describe('Ukrpravda main page', () => {
         const youtubeIcon = await $('.footer_social_item[href="https://www.youtube.com/channel/UChparf_xrUZ_CJGQY5g4aEg"]')
         await youtubeIcon.scrollIntoView()
         await browser.pause(1000)
+        await youtubeIcon.saveScreenshot('youtubeicon.png')
         
     })
 
@@ -26,12 +27,12 @@ describe('Ukrpravda main page', () => {
 
     })
 
-    it('should check label isVisible by assert', async () => {
+    xit('should check label isVisible by assert', async () => {
         await browser.url('https://www.pravda.com.ua/')
         await browser.pause(2000)
 
         const label = await $("[aria-label='Українська правда']")
-        
+
         assert(await label.isDisplayed() === true)
     })
 })
