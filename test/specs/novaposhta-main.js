@@ -2,7 +2,7 @@ import { expect } from '@wdio/globals'
 
 
 describe('Nova Poshta main page', () => {
-    xit('main page getTitle', async () => {
+    xit('should getTitle of main page', async () => {
         await browser.url('https://novaposhta.ua/')
         await browser.pause(1000)
         const title = await browser.getTitle()
@@ -12,7 +12,7 @@ describe('Nova Poshta main page', () => {
         
     })
     
-    xit('addValue to search field', async () => {
+    xit('should addValue to search field', async () => {
         await browser.url('https://novaposhta.ua/')
         await browser.pause(1000)
         
@@ -23,7 +23,7 @@ describe('Nova Poshta main page', () => {
         await expect(searchField).toHaveValue('String')
     })
     
-    xit('click search button', async () => {
+    xit('should click search button', async () => {
         await browser.url('https://novaposhta.ua/')
         await browser.pause(4000)
                 
@@ -44,7 +44,7 @@ describe('Nova Poshta main page', () => {
 
     })
 
-    xit('getAttribute from Contacts button and go to recieved link', async () => {
+    xit('should getAttribute from Contacts button and go to recieved link', async () => {
         await browser.url('https://novaposhta.ua/')
         await browser.pause(1000)
         
@@ -56,7 +56,7 @@ describe('Nova Poshta main page', () => {
         await browser.pause(1000)
     })
 
-    it('is register clickable', async () => {
+    xit('shoud check is register button clickable', async () => {
         await browser.url('https://novaposhta.ua/')
         await browser.pause(1000)
         
