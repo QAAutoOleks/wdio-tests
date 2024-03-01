@@ -20,6 +20,10 @@ class SignInPage {
     get inactiveSearchFieldOnMainPage() { return $('.header-search-button') }
     get activeSearchFieldOnMainPage() { return $('#query-builder-test') }
     get cardWithSearchedWord() { return $('[href="/nektos/act"]') }
+    get pricingMenu() { return $('aria/Pricing') }
+    get headerOnPricingPage() { return $('/html/body/div[1]/div[4]/main/div[1]/h1')}
+    get buttonCompareAllFeatures() { return $('[href="#compare-features"]') }
+    get freePriceColumn() { return $('[data-hydro-click-hmac="5d98dad46abd67c837938d121e7b2ddb04f045b545ba5e67d5a0ed94dce85566"]') }
 
     async signInButtonClick() {
         const signUpLink = await this.signInButton.getAttribute('href')
@@ -77,6 +81,12 @@ class SignInPage {
     }
     async addValueToActiveSearchFieldOnMainPage(value) {
         await this.activeSearchFieldOnMainPage.addValue(value)
+    }
+    async clickOnPricingMenu() {
+        await this.pricingMenu.click()
+    }
+    async clickOnButtonCompareAllFeatures() {
+        await this.buttonCompareAllFeatures.click()
     }
 }
 

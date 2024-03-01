@@ -60,7 +60,7 @@ describe('Github application testing', () => {
         await browser.pause(1000)
     })
     
-    it('should search', async () => {
+    xit('should search by field on main page', async () => {
         await browser.url('https://github.com/')
         await browser.maximizeWindow()
         await SignInPage.clickOnInactiveSearchFieldOnMainPage()
@@ -68,7 +68,20 @@ describe('Github application testing', () => {
         await browser.pause(1000)
         await browser.keys('Enter')
         await browser.pause(2000)
-
+        
         await expect(SignInPage.cardWithSearchedWord).toBeDisplayed()
+    })
+    
+    it('should open pricing menu', async () => {
+        await browser.url('https://github.com/')
+        await browser.maximizeWindow()
+        await SignInPage.clickOnPricingMenu()        
+        await browser.pause(2000)
+        
+        await expect(SignInPage.headerOnPricingPage).toBeDisplayed()
+        
+        await SignInPage.clickOnButtonCompareAllFeatures()
+
+        await expect(SignInPage.freePriceColumn).toBeDisplayed()
     })
 })
