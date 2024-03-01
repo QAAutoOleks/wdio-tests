@@ -6,8 +6,8 @@ Displaying catalogs name on header of page after searching
 3.  | Enter value 'laptop' to search field      | The entered data is displayed in the 
     |                                           | search field
 4.  | Click on the "Знайти" button              | The page with laptops catalog is opened
-5.  | Pay attention to catalog heading at       | Catalog heading is contained 'Ноутбуки'
-    | upper wright corner of the page           | 
+5.  | Get text from catalog heading at upper    | Text from catalog heading is contained 
+    | wright corner of the page                 | 'Ноутбуки'
 
 
 Equaling price on goods page and price in cart
@@ -27,7 +27,7 @@ Displaying added product in cart
 4.  | Go to the main page                       | The main page is displayed
 5.  | Click on the cart icon at the header of   | The cart with added product is opened
     | page                                      |
-6.  | Pay attention to name of product contained| Names of product on goods page and in 
+6.  | Get text from name of product contained   | Names of product on goods page and in 
     | in cart                                   | cart are equal
 
 
