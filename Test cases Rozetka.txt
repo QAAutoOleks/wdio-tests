@@ -6,8 +6,8 @@ Displaying catalogs name on header of page after searching
 2.  | Enter value 'laptop' to search field      | The entered data is displayed in the 
     |                                           | search field
 3.  | Click on the "Знайти" button              | The page of laptops catalog is opened
-4.  | Check catalog heading at upper wright     |
-    | corner of the page                        | Catalog heading is contained 'Ноутбуки'
+4.  | Pay attention to catalog heading at       | Catalog heading is contained 'Ноутбуки'
+    | upper wright corner of the page           | 
 
 
 Equaling price on goods page and price in cart
@@ -20,3 +20,39 @@ Equaling price on goods page and price in cart
     | cart
 
 
+Displaying added product in cart
+
+#   |                     Steps                 |               Expected result             
+1.  | Open goods page                           | The goods page is displayed
+2.  | Save to memory name of goods              | Name is stored in particular variable
+3.  | Click on the "Купити" button              | The cart with added product is opened
+4.  | Go to the main page                       | The main page is displayed
+5.  | Click on the cart icon at the header of   | The cart with added product is opened
+    | page                                      |
+6.  | Pay attention to name of product contained| Names of product on goods page and in 
+    | in cart                                   | cart are equal
+
+
+Displaying Facebooks icon in menu authorization
+
+#   |                     Steps                 |               Expected result             
+1.  | Open main page                            | The main page is displayed
+2.  | Click on the authorization menu icon      | Authorization menu is opened
+    | at the header of page                     |
+3.  | Pay attention to Facebooks icon in        | Facebooks icon is displayed in 
+    | authorization menu                        | authorization menu
+
+
+Сhanging total purchase amount after quantity of product in cart is added
+
+#   |                     Steps                 |               Expected result             
+1.  | Open goods page                           | The goods page is displayed
+2.  | Click on the "Купити" button              | The cart with added product is opened
+3.  | Save to memory total purchase amount      | Total purchase amount is stored in 
+    |                                           | particular variable
+4.  | Set quantity of goods = "2" in counter    | The entered quantity is displayed in the
+    | window                                    | counter window
+5.  | Save to memory total purchase amount      | Total purchase amount is stored in 
+    | after quantity of goods was changed       | particular variable
+6.  | Comparison total purchase amount before   | Total purchase amount after quantity
+7.  | quantity was changed and after that       | changed = 2 * initial purchase amount
