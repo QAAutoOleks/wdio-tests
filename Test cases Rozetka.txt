@@ -2,10 +2,11 @@
 Displaying catalogs name on header of page after searching
 #   |                     Steps                 |               Expected result             
 1.  | Open main page                            | The main page is displayed
-2.  | Enter value 'laptop' to search field      | The entered data is displayed in the 
+2.  | Get title of the main page                | Title contains 'ROZETKA' word
+3.  | Enter value 'laptop' to search field      | The entered data is displayed in the 
     |                                           | search field
-3.  | Click on the "Знайти" button              | The page with laptops catalog is opened
-4.  | Pay attention to catalog heading at       | Catalog heading is contained 'Ноутбуки'
+4.  | Click on the "Знайти" button              | The page with laptops catalog is opened
+5.  | Pay attention to catalog heading at       | Catalog heading is contained 'Ноутбуки'
     | upper wright corner of the page           | 
 
 

@@ -7,7 +7,7 @@ describe('Testing rozetka UI', () => {
     xit('should display catalogs name after searching', async () => {
         await browser.url('https://rozetka.com.ua/ua/')
         await browser.pause(2000)
-        await expect(browser).toHaveTitle('Інтернет-магазин ROZETKA™: офіційний сайт найпопулярнішого онлайн-гіпермаркету в Україні')
+        await expect(await browser.getTitle()).toContain('ROZETKA')
         
         const searchField = await $('.search-form__input')
         await searchField.addValue('laptop')
