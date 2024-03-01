@@ -1,5 +1,6 @@
 import { expect } from '@wdio/globals'
 import SignInPage from "./../pages/github.js"
+import { Key } from 'webdriverio'
 
 describe('Github application testing', () => {
 
@@ -43,9 +44,9 @@ describe('Github application testing', () => {
     xit('should displays subscribe button and select options on subscribe page', async () => {
         await browser.url('https://github.com/')
         await SignInPage.scrollDownToSubscribeButtonOnMainPage()
-
+        
         await expect(SignInPage.subscribeButtonOnMainPage).toBeClickable()
-
+        
         await SignInPage.clickSubscribeButtonOnMainPage()
         await browser.pause(1000)
         
@@ -57,5 +58,17 @@ describe('Github application testing', () => {
         await SignInPage.clickOnCheckboxOnSubscribePage()
         await SignInPage.clickSubscribeButtonOnSubscribePage()
         await browser.pause(1000)
+    })
+    
+    it('should search', async () => {
+        await browser.url('https://github.com/')
+        await browser.maximizeWindow()
+        await SignInPage.clickOnInactiveSearchFieldOnMainPage()
+        await SignInPage.addValueToActiveSearchFieldOnMainPage('act')
+        await browser.pause(1000)
+        await browser.keys('Enter')
+        await browser.pause(2000)
+
+        await expect(SignInPage.cardWithSearchedWord).toBeDisplayed()
     })
 })

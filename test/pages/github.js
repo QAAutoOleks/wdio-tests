@@ -17,6 +17,9 @@ class SignInPage {
     get countrySelectOnSubscribePage() { return $('#country') }
     get checkboxOnSubscribePage() {return $('#gated-agree-marketingEmailOptin1')}
     get subscribeButtonOnSubscribePage() { return $('.Primer_Brand__Button-module__Button___lDruK') }
+    get inactiveSearchFieldOnMainPage() { return $('.header-search-button') }
+    get activeSearchFieldOnMainPage() { return $('#query-builder-test') }
+    get cardWithSearchedWord() { return $('[href="/nektos/act"]') }
 
     async signInButtonClick() {
         const signUpLink = await this.signInButton.getAttribute('href')
@@ -68,6 +71,12 @@ class SignInPage {
     }
     async clickSubscribeButtonOnSubscribePage() {
         await this.subscribeButtonOnSubscribePage.click()
+    }
+    async clickOnInactiveSearchFieldOnMainPage() {
+        await this.inactiveSearchFieldOnMainPage.click()
+    }
+    async addValueToActiveSearchFieldOnMainPage(value) {
+        await this.activeSearchFieldOnMainPage.addValue(value)
     }
 }
 
