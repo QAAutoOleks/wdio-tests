@@ -1,17 +1,15 @@
 
 Displaying catalogs name on header of page after searching
-
 #   |                     Steps                 |               Expected result             
 1.  | Open main page                            | The main page is displayed
 2.  | Enter value 'laptop' to search field      | The entered data is displayed in the 
     |                                           | search field
-3.  | Click on the "Знайти" button              | The page of laptops catalog is opened
+3.  | Click on the "Знайти" button              | The page with laptops catalog is opened
 4.  | Pay attention to catalog heading at       | Catalog heading is contained 'Ноутбуки'
     | upper wright corner of the page           | 
 
 
 Equaling price on goods page and price in cart
-
 #   |                     Steps                 |               Expected result             
 1.  | Open goods page                           | The goods page is displayed
 2.  | Save to memory price of goods             | Price is stored in particular variable
@@ -21,7 +19,6 @@ Equaling price on goods page and price in cart
 
 
 Displaying added product in cart
-
 #   |                     Steps                 |               Expected result             
 1.  | Open goods page                           | The goods page is displayed
 2.  | Save to memory name of goods              | Name is stored in particular variable
@@ -34,7 +31,6 @@ Displaying added product in cart
 
 
 Displaying Facebooks icon in menu authorization
-
 #   |                     Steps                 |               Expected result             
 1.  | Open main page                            | The main page is displayed
 2.  | Click on the authorization menu icon      | Authorization menu is opened
@@ -44,7 +40,6 @@ Displaying Facebooks icon in menu authorization
 
 
 Сhanging total purchase amount after quantity of product in cart is added
-
 #   |                     Steps                 |               Expected result             
 1.  | Open goods page                           | The goods page is displayed
 2.  | Click on the "Купити" button              | The cart with added product is opened
