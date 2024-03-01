@@ -1,7 +1,7 @@
 class SignInPage {
 
     get signInButton() { return $(".HeaderMenu-link--sign-up") }
-    get emailField() { return $("#email") }
+    get emailFieldRegistration() { return $("#email") }
     get continueAfterEmailButton() { return $('[data-continue-to="password-container"]') }
     get passwordField() { return $("#password") }
     get continueAfterPasswordButton() { return $('[data-continue-to="username-container"]') }
@@ -11,7 +11,12 @@ class SignInPage {
     get buttonStartFreeEnterpriseTrial() { return $('[data-test-selector="start-trial-button"]') }
     get headerPickYourPlan() { return $('.d-md-block') }
     get buttonEnterpriseCloud() { return $('aria/Enterprise Cloud')}
-    get subscribeButton() { return $('[href="https://resources.github.com/newsletter/"]')}
+    get subscribeButtonOnMainPage() { return $('[href="https://resources.github.com/newsletter/"]')}
+    get headerOnSubscribePage() { return $('<h1 />') }
+    get emailFieldOnSubscibePage() {return $('input[name="emailAddress"]') }
+    get countrySelectOnSubscribePage() { return $('#country') }
+    get checkboxOnSubscribePage() {return $('#gated-agree-marketingEmailOptin1')}
+    get subscribeButtonOnSubscribePage() { return $('.Primer_Brand__Button-module__Button___lDruK') }
 
     async signInButtonClick() {
         const signUpLink = await this.signInButton.getAttribute('href')
@@ -23,7 +28,7 @@ class SignInPage {
         }, 5000, 'Button is not displayed')
     }
     async addValueToEmailField(value) {
-        await this.emailField.addValue(value)
+        await this.emailFieldRegistration.addValue(value)
     }
     async clickButtonAfterEmail() {
         await this.continueAfterEmailButton.click()
@@ -46,11 +51,23 @@ class SignInPage {
     async clickButtonStartFreeEnterpriseTrial() {
         await this.buttonStartFreeEnterpriseTrial.click()
     }
-    async scrollDownToSubscribeButton() {
-        await this.subscribeButton.scrollIntoView()
+    async scrollDownToSubscribeButtonOnMainPage() {
+        await this.subscribeButtonOnMainPage.scrollIntoView()
     }
-    async clickSubscribeButton() {
-        await this.subscribeButton.click()
+    async clickSubscribeButtonOnMainPage() {
+        await this.subscribeButtonOnMainPage.click()
+    }
+    async addValueToEmailFieldSubscribePage(value) {
+        await this.emailFieldOnSubscibePage.addValue(value)
+    }
+    async selectCountryOnSubscribePage(attribute) {
+        await this.countrySelectOnSubscribePage.selectByAttribute('value', attribute)
+    }
+    async clickOnCheckboxOnSubscribePage() {
+        await this.checkboxOnSubscribePage.click()
+    }
+    async clickSubscribeButtonOnSubscribePage() {
+        await this.subscribeButtonOnSubscribePage.click()
     }
 }
 

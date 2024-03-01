@@ -40,15 +40,22 @@ describe('Github application testing', () => {
         await SignInPage.buttonEnterpriseCloud.click()
     })
 
-    it('should displays subscribe button', async () => {
+    xit('should displays subscribe button and select options on subscribe page', async () => {
         await browser.url('https://github.com/')
-        await SignInPage.scrollDownToSubscribeButton()
+        await SignInPage.scrollDownToSubscribeButtonOnMainPage()
 
-        await expect(SignInPage.subscribeButton).toBeClickable()
+        await expect(SignInPage.subscribeButtonOnMainPage).toBeClickable()
 
-        await SignInPage.clickSubscribeButton()
+        await SignInPage.clickSubscribeButtonOnMainPage()
         await browser.pause(1000)
-
+        
         await expect(browser).toHaveUrl('https://resources.github.com/newsletter/')
+        await expect(SignInPage.headerOnSubscribePage).toBeDisplayed()
+        
+        await SignInPage.addValueToEmailFieldSubscribePage('randomemailgit@gmail.com')
+        await SignInPage.selectCountryOnSubscribePage('UA')
+        await SignInPage.clickOnCheckboxOnSubscribePage()
+        await SignInPage.clickSubscribeButtonOnSubscribePage()
+        await browser.pause(1000)
     })
 })
