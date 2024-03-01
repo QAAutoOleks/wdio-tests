@@ -8,6 +8,10 @@ class SignInPage {
     get userNameField() { return $("#login") }
     get continueAfterUserNameButton() { return $('[data-continue-to="opt-in-container"]') }
     get headerAtBottomOfPage() { return $('.h2-mktg')}
+    get buttonStartFreeEnterpriseTrial() { return $('[data-test-selector="start-trial-button"]') }
+    get headerPickYourPlan() { return $('.d-md-block') }
+    get buttonEnterpriseCloud() { return $('aria/Enterprise Cloud')}
+    get subscribeButton() { return $('[href="https://resources.github.com/newsletter/"]')}
 
     async signInButtonClick() {
         const signUpLink = await this.signInButton.getAttribute('href')
@@ -38,6 +42,15 @@ class SignInPage {
     }
     async scrollDownToHeader() {
         await this.headerAtBottomOfPage.scrollIntoView()
+    }
+    async clickButtonStartFreeEnterpriseTrial() {
+        await this.buttonStartFreeEnterpriseTrial.click()
+    }
+    async scrollDownToSubscribeButton() {
+        await this.subscribeButton.scrollIntoView()
+    }
+    async clickSubscribeButton() {
+        await this.subscribeButton.click()
     }
 }
 
