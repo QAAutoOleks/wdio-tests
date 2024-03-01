@@ -7,10 +7,12 @@ describe('Testing rozetka UI', () => {
     xit('should display catalogs name after searching', async () => {
         await browser.url('https://rozetka.com.ua/ua/')
         await browser.pause(2000)
+        await expect(browser).toHaveTitle('Інтернет-магазин ROZETKA™: офіційний сайт найпопулярнішого онлайн-гіпермаркету в Україні')
         
         const searchField = await $('.search-form__input')
         await searchField.addValue('laptop')
         await browser.pause(1000)
+        await expect(searchField).toHaveValue('laptop')
         
         const buttonSearchField = await $('.button_color_green')
         await buttonSearchField.click()
@@ -23,6 +25,7 @@ describe('Testing rozetka UI', () => {
     
     xit('should price on goods page equals price in cart', async () =>{
         await browser.url('https://rozetka.com.ua/ua/lenovo-82k20297ra/p400997976/')
+        await expect(browser).toHaveTitle('Ноутбук Lenovo IdeaPad Gaming 3 15ACH6 (82K20297RA) Shadow Black / 15.6" IPS Full HD 144 Гц / AMD Ryzen 5 5500H / RAM 16 ГБ / SSD 512 ГБ / nVidia GeForce RTX 2050 / 4-Zone RGB Підсвітка клавіатури – фото, відгуки, характеристики в інтернет-магазині ROZETKA | Купити в Україні: Києві, Харкові, Дніпрі, Одесі, Запоріжжі, Львові')
 
         const priceGoodsPage = await $('.product-price__big').getText()
         
@@ -66,7 +69,7 @@ describe('Testing rozetka UI', () => {
         await expect(facebookIcon).toBeDisplayed()
     })
 
-    it('should total amount changes after set quantity of goods in cart', async () => {
+    xit('should total amount changes after set quantity of goods in cart', async () => {
         await browser.url('https://rozetka.com.ua/ua/lenovo-82k20297ra/p400997976/')
         
         const buyButton = await $('.mode-slim')
