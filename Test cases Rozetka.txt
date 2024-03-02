@@ -10,7 +10,7 @@ Displaying catalogs name at header of page after searching
     | wright corner of the page                 | 'Ноутбуки'
 
 
-Equaling price on goods page and price in cart
+Comparing price on goods page and price in cart
 #   |                     Steps                 |               Expected result             
 1.  | Open goods page                           | The goods page is displayed
 2.  | Save to memory price of goods             | Price is stored in particular variable
