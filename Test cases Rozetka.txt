@@ -36,7 +36,7 @@ Displaying Facebooks icon in menu authorization
 1.  | Open main page                            | The main page is displayed
 2.  | Click on the authorization menu icon      | Authorization menu is opened
     | at the header of page                     |
-3.  | Pay attention to Facebooks icon in        | Facebooks icon is displayed in 
+3.  | Check if Facebooks icon is displayed at   | Facebooks icon is displayed in 
     | authorization menu                        | authorization menu
 
 
